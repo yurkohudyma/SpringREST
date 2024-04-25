@@ -7,6 +7,7 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.document.*;
 import lombok.extern.log4j.Log4j2;
+import org.junit.BeforeClass;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -63,7 +64,7 @@ class SpringRestApplicationTests {
         assertEquals(item.asMap(), Map.of(
                 "name", "John",
                 "id", "1",
-                "email", "email@gmail.com"));
+                "email", "john@gmail.com"));
     }
 
     private static Optional<Properties> loadFromFileInClasspath(String fileName) {
